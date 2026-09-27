@@ -1,0 +1,140 @@
+{
+  "company": {
+    "name": "Golden Gate Catering Co.",
+    "tagline": "Bay Area Catering & Events",
+    "phone": "(415) 555-0142",
+    "email": "events@goldengatecatering.example",
+    "proposal_valid_days": 30,
+    "deposit_pct": 0.25
+  },
+  "venues": {
+    "brazilian-room": {
+      "name": "The Brazilian Room",
+      "location": "Tilden Regional Park, Berkeley, CA",
+      "county": "Alameda",
+      "doc": "venues/brazilian_room.md",
+      "capacity_seated": 150,
+      "capacity_standing": 225,
+      "guest_minimum": 50,
+      "kitchen_fee": 350.0,
+      "delivery_zone": "east-bay",
+      "insurance_required": true,
+      "notes_for_pricing": "Full prep kitchen on site; no open flame outdoors; music curfew 10pm.",
+      "aliases": ["brazilian room", "brazil room", "tilden"]
+    },
+    "generals-residence": {
+      "name": "The General's Residence",
+      "location": "Fort Mason, San Francisco, CA",
+      "county": "San Francisco",
+      "doc": "venues/generals_residence.md",
+      "capacity_seated": 130,
+      "capacity_standing": 200,
+      "guest_minimum": 60,
+      "kitchen_fee": 500.0,
+      "delivery_zone": "sf",
+      "insurance_required": true,
+      "notes_for_pricing": "Warming kitchen only — plated service requires hot-box transport surcharge; historic building, no confetti or open flame.",
+      "aliases": ["general's residence", "generals residence", "fort mason"]
+    },
+    "piedmont-hall": {
+      "name": "Piedmont Community Hall",
+      "location": "Piedmont Park, Piedmont, CA",
+      "county": "Alameda",
+      "doc": "venues/piedmont_hall.md",
+      "capacity_seated": 180,
+      "capacity_standing": 250,
+      "guest_minimum": 40,
+      "kitchen_fee": 250.0,
+      "delivery_zone": "east-bay",
+      "insurance_required": false,
+      "notes_for_pricing": "Full kitchen; ample parking; alcohol requires city permit for events over 100 guests.",
+      "aliases": ["piedmont community hall", "piedmont hall", "piedmont"]
+    }
+  },
+  "menus": {
+    "spring-garden-buffet": {
+      "name": "Spring Garden Buffet",
+      "doc": "menus/spring_garden_buffet.md",
+      "seasons_months": [3, 4, 5, 6],
+      "event_types": ["wedding", "social", "corporate", "gala"],
+      "service_styles": ["buffet"],
+      "price_per_person": 68.0,
+      "vegetarian_friendly": true
+    },
+    "summer-coastal-plated": {
+      "name": "Summer Coastal Plated Dinner",
+      "doc": "menus/summer_coastal_plated.md",
+      "seasons_months": [6, 7, 8, 9],
+      "event_types": ["wedding", "social", "gala"],
+      "service_styles": ["plated"],
+      "price_per_person": 92.0,
+      "vegetarian_friendly": true
+    },
+    "fall-harvest-plated": {
+      "name": "Fall Harvest Plated Dinner",
+      "doc": "menus/fall_harvest_plated.md",
+      "seasons_months": [9, 10, 11],
+      "event_types": ["wedding", "social", "gala", "corporate"],
+      "service_styles": ["plated"],
+      "price_per_person": 88.0,
+      "vegetarian_friendly": true
+    },
+    "cocktail-reception-classic": {
+      "name": "Classic Cocktail Reception",
+      "doc": "menus/cocktail_reception_classic.md",
+      "seasons_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "event_types": ["wedding", "social", "corporate", "gala"],
+      "service_styles": ["cocktail"],
+      "price_per_person": 34.0,
+      "vegetarian_friendly": true,
+      "addon_only_with_dinner_price_per_person": 22.0
+    },
+    "corporate-lunch-buffet": {
+      "name": "Corporate Lunch Buffet",
+      "doc": "menus/corporate_lunch_buffet.md",
+      "seasons_months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+      "event_types": ["corporate"],
+      "service_styles": ["buffet"],
+      "price_per_person": 42.0,
+      "vegetarian_friendly": true
+    }
+  },
+  "pricing_rules": {
+    "service_charge_pct": 0.22,
+    "sales_tax_by_county": {
+      "Alameda": 0.1025,
+      "San Francisco": 0.08625
+    },
+    "staffing": {
+      "server_hourly": 55.0,
+      "captain_hourly": 65.0,
+      "bartender_hourly": 60.0,
+      "chef_hourly": 70.0,
+      "minimum_hours": 6,
+      "guests_per_server": {"plated": 15, "buffet": 25, "stations": 20, "cocktail": 20},
+      "guests_per_bartender": 75,
+      "captains_per_event": 1,
+      "chefs_per_event": {"plated": 2, "buffet": 1, "stations": 2, "cocktail": 1}
+    },
+    "bar": {
+      "beer_wine_package_per_person": 24.0,
+      "full_bar_package_per_person": 36.0,
+      "non_alcoholic_per_person": 6.0
+    },
+    "rentals_per_person": {"plated": 22.0, "buffet": 14.0, "stations": 17.0, "cocktail": 9.0},
+    "delivery_fee_by_zone": {"sf": 275.0, "east-bay": 200.0, "north-bay": 350.0, "south-bay": 350.0},
+    "surcharges": {
+      "warming_kitchen_plated_per_person": 4.0,
+      "saturday_premium_pct": 0.05,
+      "guest_count_discount": {"threshold": 175, "pct": 0.03}
+    },
+    "special_meals": {
+      "child_meal_price": 25.0,
+      "vendor_meal_price": 35.0
+    },
+    "cocktail_hour_addon": {
+      "menu_id": "cocktail-reception-classic",
+      "uses_addon_price": true
+    }
+  }
+}
